@@ -6,19 +6,18 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: white; 
-  color: black;           
+  background-color: #f8fafc;;
+  color: black;
   line-height: 1.5;
 }
 
 header {
-  padding: 70px 0;
+  padding: 70px;
   text-align: center;
 }
 
 header h1 {
-  color: rgb(25, 161, 161);
-  letter-spacing: 2px;
+  color: black;
   font-size: 2.0rem;
 }
 
@@ -26,12 +25,6 @@ main {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
-}
-
-.info h1, h2 {
-  color: black;
-  font-size: 40px;
-  margin-bottom: 20px;
 }
 
 #pessoa {
@@ -46,10 +39,59 @@ main {
   flex: 1;
 }
 
+.info h1 {
+  color: rgb(27, 186, 192);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.info h2 {
+  color: black;
+  font-size: 1.5rem;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.skills-icons {
+  display: flex;
+  gap: 30px;
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.skills-icons i {
+  transition: transform 0.3s ease;
+}
+
+.skills-icons i:hover {
+  transform: scale(1.1);
+}
+
+.lista-projetos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.lista-projetos a {
+  text-decoration: none;
+  color: rgb(27, 186, 192);
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: transform 0.2s, color 0.2s;
+  display: inline-block;
+}
+
+.lista-projetos a:hover {
+  color: #0E5E61;
+  transform: translateX(5px);
+}
+
 .foto img {
   width: 320px;
   height: 320px;
-  border-radius: 50%; /* Foto redonda como no desenho */
+  border-radius: 50%;
   object-fit: cover;
   border: 10px solid #ffffff;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -57,25 +99,12 @@ main {
 
 footer {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 50px 0;
-}
-
-footer a {
-  text-decoration: none;
-  color: #3b82f6;
-  font-weight: 600;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;           
+  justify-content: space-between;
+  align-items: center;
   padding: 40px 0;
-  border-top: 1px solid #e2e8f0; 
-  max-width: 1100px;             
-  margin: 0 auto;                
+  border-top: 1px solid #e2e8f0;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .footer-titulo h1 {
@@ -85,16 +114,16 @@ footer {
 
 .footer-links {
   display: flex;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .footer-links a {
   text-decoration: none;
-  color: #3b82f6;
+  color: rgb(27, 186, 192);
   font-weight: 600;
   transition: color 0.3s;
 }
 
 .footer-links a:hover {
-  color: #1d4ed8;
+  color: #0E5E61;
 }
