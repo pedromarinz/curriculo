@@ -6,25 +6,15 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8fafc;;
-  color: black;
+  background-color: #f1f3f5; 
   line-height: 1.5;
-}
-
-header {
-  padding: 70px;
-  text-align: center;
-}
-
-header h1 {
-  color: black;
-  font-size: 2.0rem;
+  color: #333;
 }
 
 main {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px;
 }
 
 #pessoa {
@@ -33,6 +23,7 @@ main {
   align-items: center;
   gap: 50px;
   padding: 80px 0;
+  width: 100%;
 }
 
 .info {
@@ -46,25 +37,54 @@ main {
 }
 
 .info h2 {
-  color: black;
   font-size: 1.5rem;
-  margin-top: 25px;
+  margin-top: 40px;
   margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.lista-certificacoes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lista-certificacoes li {
+  position: relative;
+  padding-left: 25px;
+  font-size: 1.05rem;
+}
+
+.lista-certificacoes li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: rgb(27, 186, 192);
+  font-weight: bold;
+}
+
+.lista-certificacoes strong {
+  color: rgb(27, 186, 192);
 }
 
 .skills-icons {
   display: flex;
-  gap: 30px;
-  font-size: 60px;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
   margin-top: 20px;
 }
 
-.skills-icons i {
+.skills-icons img {
+  width: 55px;
+  height: auto;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-.skills-icons i:hover {
-  transform: scale(1.1);
+.skills-icons img:hover {
+  transform: scale(1.2);
 }
 
 .lista-projetos {
@@ -77,15 +97,22 @@ main {
 .lista-projetos a {
   text-decoration: none;
   color: rgb(27, 186, 192);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.1rem;
-  transition: transform 0.2s, color 0.2s;
+  transition: all 0.2s ease;
   display: inline-block;
+  width: fit-content;
 }
 
 .lista-projetos a:hover {
-  color: #0E5E61;
+  color: #0e5e61;
   transform: translateX(5px);
+}
+
+.foto {
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 20px;
 }
 
 .foto img {
@@ -94,27 +121,28 @@ main {
   border-radius: 50%;
   object-fit: cover;
   border: 10px solid #ffffff;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 0;
+  padding: 60px 20px;
   border-top: 1px solid #e2e8f0;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .footer-titulo h1 {
-  font-size: 25px;
+  font-size: 20px;
   color: #1e293b;
 }
 
 .footer-links {
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 .footer-links a {
@@ -125,5 +153,35 @@ footer {
 }
 
 .footer-links a:hover {
-  color: #0E5E61;
+  color: #0e5e61;
+}
+
+@media (max-width: 768px) {
+  #pessoa {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .foto {
+    align-self: center;
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .foto img {
+      width: 250px;
+      height: 250px;
+    }
+
+    .skills-icons {
+      justify-content: center;
+    }
+
+    .lista-projetos a {
+      align-self: center;
+    }
+  }
 }
